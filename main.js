@@ -77,13 +77,13 @@ function showTodos() {
   console.log('現在持っているのタスク一覧');
   console.log(' ========================');
 
-if (todos.length > 0) {
-  todos.forEach((todo, index) => {
-    console.log(index  + '：' + todo)
-  });
-} else {
-  console.log('タスクなし');
- }
+  if (todos.length > 0) {
+    todos.forEach((todo, index) => {
+      console.log(index  + '：' + todo)
+    });
+  } else {
+    console.log('タスクなし');
+   }
 }
 
 /**
@@ -98,14 +98,14 @@ if (todos.length > 0) {
  */
 // ここにcreateTodo関数を作る
 function createTodo() {
-const todo = prompt('タスクを入力してください');
-if (todo) {
-  todos.push(todo);
-  alert('新しいタスクを追加しました。'); 
-  showTodos();
-} else {
-  alert('何も入力されていないためスキップします');
-}
+  const todo = prompt('タスクを入力してください');
+  if (todo) {
+    todos.push(todo);
+    alert('新しいタスクを追加しました。'); 
+    showTodos();
+  } else {
+    alert('何も入力されていないためスキップします');
+  }
 }
 /**
  * 「削除」が入力されたときに実行される関数
